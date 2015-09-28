@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wedding List</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="bower_components/skeleton/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body class="container" ng-app="WeddingApp">
+
+    <div class="viewer" ng-view></div>
+
+
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="lib/angular-vertilize/angular-vertilize.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/main.config.js"></script>
+    <script src="js/factories/data.factory.js"></script>
+    <script src="js/filters/reverse.filter.js"></script>
+    <script src="js/controllers/attendees.controller.js"></script>
+    <script src="js/controllers/person.controller.js"></script>
+    <script src="js/controllers/money.controller.js"></script>
+
+  </body>
+</html>

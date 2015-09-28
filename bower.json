@@ -1,0 +1,26 @@
+{
+  "name": "wedding-attendees",
+  "version": "0.0.0",
+  "authors": [
+    "Luke Lancaster <luketlancaster@gmail.com>"
+  ],
+  "description": "viewer for all attending the wedding",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-filter": "~0.5.5",
+    "angular-route": "~1.4.6",
+    "angularfire": "~1.1.2",
+    "firebase": "~2.2.9",
+    "jquery": "~2.1.4",
+    "skeleton": "~2.0.4"
+  }
+}

@@ -1,0 +1,46 @@
+<h1 class="twelve columns headline">{{attendees.title}}</h1>
+<div class="row">
+  <button class="calculate six columns" type="button" ng-click="attendees.calculate()">Calculate!</button>
+  <h2 class="six columns">Total: {{attendees.total}}</h2>
+</div>
+<div class="headline twelve columns">
+  <h2 class="six columns"><a href="/#/" ng-click="attendees.tableView = !attendees.tableView">Toggle Table View</a></h2>
+  <h2 class="six columns"><a href="/#/" ng-click="attendees.cardView = !attendees.cardView">Toggle Card View</a></h2>
+</div>
+
+<form>
+  <label for="search-box">Search</label>
+  <input type="text" class="u-full-width" placeholder="search..." id="search-box" ng-model="search.$">
+</form>
+
+<div vertilize-container ng-show="attendees.cardView">
+  <div vertilize ng-repeat="people in attendees.peoples | reverse | filter:search" class="four columns main-box">
+    <h4><a ng-href="/#/person/{{people.$id}}">{{people.name}}</a></h4>
+    <a href="mailto:{{people.email}}">{{people.email}}</a>
+    <p>Number Attending: {{people.number}}</p>
+    <p>{{people.message}}</p>
+  </div>
+</div>
+
+<div ng-show="attendees.tableView">
+  <table class="u-full-width">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Attending?</th>
+        <th>Number</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="people in attendees.peoples | filter:search">
+        <td>{{people.name}}</td>
+        <td><a href="mailto:{{people.email}}">{{people.email}}</a></td>
+        <td>{{people.attending}}</td>
+        <td>{{people.number}}</td>
+        <td>{{people.message}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

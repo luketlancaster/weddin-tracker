@@ -1,0 +1,13 @@
+<div class="twelve columns person-body">
+  <h1>{{person.individual.name}}</h1>
+  <h2><a ng-href="mailto:{{person.individual.email}}">{{person.individual.email}}</a></h2>
+  <h2>{{person.individual.attending}}</h2>
+  <h2>{{person.individual.number}}</h2>
+  <h4>{{person.individual.message}}</h4>
+
+  <h5><a href="/#/">Home</a></h5>
+
+  <input type="radio" ng-model="person.radio.name" value="joe">Joe
+  <input type="radio" ng-model="person.radio.name" value="Jane">Jane
+
+</div>
