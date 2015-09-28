@@ -2,6 +2,12 @@ angular
   .module('WeddingApp')
   .controller('AttendeesCtrl', AttendeesCtrl)
 
+if (!String.prototype.includes) {
+  String.prototype.includes = function() {'use strict';
+    return String.prototype.indexOf.apply(this, arguments) !== -1;
+  };
+}
+
 function AttendeesCtrl(DataFactory) {
   var vm = this;
   var ref = new Firebase('https://weddin.firebaseio.com/attendees');

@@ -2,6 +2,12 @@ angular
   .module('WeddingApp')
   .controller('MoneyCtrl', MoneyCtrl)
 
+if (!String.prototype.includes) {
+  String.prototype.includes = function() {'use strict';
+    return String.prototype.indexOf.apply(this, arguments) !== -1;
+  };
+}
+
 function MoneyCtrl(DataFactory) {
   var vm = this;
   var peoples = DataFactory.getFolks();
