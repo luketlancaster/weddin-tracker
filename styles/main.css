@@ -43,6 +43,15 @@ body {
   background-color: #999;
 }
 
+.person-notes p {
+  display: inline;
+  font-size: 1.2em;
+}
+
+.person-notes button {
+  color: #930;
+}
+
 a {
   color: #333;
   word-wrap: break-word;

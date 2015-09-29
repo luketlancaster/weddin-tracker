@@ -15,7 +15,7 @@
     <button ng-click="person.saveNote()">Save Note</button>
   </form>
   <div class="person-notes" ng-repeat="(key, note) in data.notes">
+    <button ng-click="person.remove(key)">X</button>
     <p>{{note}}</p>
-    <button ng-click="person.remove(key)">Remove</button>
   </div>
 </div>
