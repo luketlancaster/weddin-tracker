@@ -14,8 +14,8 @@
     <input ng-model="person.note" id="person-note" class="eight columns" type="text">
     <button ng-click="person.saveNote()">Save Note</button>
   </form>
-  <div class="person-notes" ng-repeat="notes in data.notes">
-    <p>{{notes}}</p>
-    <button ng-click="person.remove()">Remove</button>
+  <div class="person-notes" ng-repeat="(key, note) in data.notes">
+    <p>{{note}}</p>
+    <button ng-click="person.remove(key)">Remove</button>
   </div>
 </div>
