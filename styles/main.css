@@ -10,9 +10,11 @@ body {
   min-height: 100%;
 }
 
-.headline {
+.headline,
+.total-people {
   text-align: center;
 }
+
 
 .main-box {
   border: #ccc 1px solid;

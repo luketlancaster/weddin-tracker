@@ -17,7 +17,8 @@ function MoneyCtrl(DataFactory) {
 
   vm.title = "Money app here!"
 
-  vm.calculate = function() {
+  peoples.$loaded(function() {
+
     angular.forEach(peoples, function(person) {
       if (person.attending.includes("Yes") || person.attending.includes("yes") || person.attending.includes("YES")) {
         total += parseInt(person.number);
@@ -27,5 +28,5 @@ function MoneyCtrl(DataFactory) {
       vm.foodCost = Math.round(total * 17.33);
       vm.chairsCost = total * 1.75;
     }
-  };
+  });
 }

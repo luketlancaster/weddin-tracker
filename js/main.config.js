@@ -1,6 +1,6 @@
 angular
   .module('WeddingApp')
-  .config( function($routeProvider) {
+  .config( function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'templates/attendees.html',
