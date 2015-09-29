@@ -8,7 +8,8 @@ if (!String.prototype.includes) {
   };
 }
 
-function AttendeesCtrl(DataFactory) {
+function AttendeesCtrl(DataFactory, $location) {
+  console.log($location);
   var vm = this;
   var ref = new Firebase('https://weddin.firebaseio.com/attendees');
 
