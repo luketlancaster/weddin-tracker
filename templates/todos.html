@@ -1,0 +1,9 @@
+<h1>Wedding Todos Here!</h1>
+<form>
+  <input type="text" ng-model="todos.todo">
+  <button ng-click="todos.save()">Save Todo</button>
+</form>
+
+<div class="twelve columns todos">
+  <h2 ng-repeat="todo in todos.todos | reverse">{{todo.$value}}</h1>
+</div>

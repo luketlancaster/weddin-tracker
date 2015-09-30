@@ -12,6 +12,11 @@ angular
         controller: 'MoneyCtrl',
         controllerAs: 'money'
       })
+      .when('/todos', {
+        templateUrl: 'templates/todos.html',
+        controller: 'TodosCtrl',
+        controllerAs: 'todos'
+      })
       .when('/person/:id', {
         templateUrl: 'templates/person.html',
         controller: 'PersonCtrl',

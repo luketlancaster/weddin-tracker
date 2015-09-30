@@ -14,6 +14,15 @@ function DataFactory($firebaseArray, $firebaseObject) {
       var ref = new Firebase('https://weddin.firebaseio.com/attendees/' + id);
       person = $firebaseObject(ref);
       return person;
+    },
+    getTodos: function() {
+      var ref = new Firebase('https://weddin.firebaseio.com/todos')
+      todos = $firebaseArray(ref);
+      return todos;
+    },
+    saveTodos: function(todo) {
+      var ref = new Firebase('https://weddin.firebaseio.com/todos')
+      ref.push(todo);
     }
   };
 }

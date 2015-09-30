@@ -20,5 +20,4 @@ function PersonCtrl($scope, $routeParams, DataFactory) {
     delete $scope.data.notes[note];
   }
 
-//$loaded
 }
