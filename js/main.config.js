@@ -7,6 +7,11 @@ angular
         controller: 'AttendeesCtrl',
         controllerAs: 'attendees'
       })
+      .when('/add', {
+        templateUrl: 'templates/add.html',
+        controller: 'AddCtrl',
+        controllerAs: 'add'
+      })
       .when('/money', {
         templateUrl: 'templates/money.html',
         controller: 'MoneyCtrl',
