@@ -27,6 +27,7 @@ function MoneyCtrl(DataFactory) {
     if (vm.foodCost === 0) {
       vm.foodCost = Math.round(total * 17.33);
       vm.chairsCost = total * 1.75;
+      vm.tables = total / 8;
     }
   });
 }
