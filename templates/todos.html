@@ -4,6 +4,18 @@
   <button ng-click="todos.save()">Save Todo</button>
 </form>
 
-<div class="twelve columns todos">
-  <h2 ng-repeat="todo in todos.todos | reverse">{{todo.$value}}</h1>
+<div class="six columns todos">
+  <h1>Todo:</h1>
+  <div ng-repeat="(key, todo) in data">
+    <button ng-click="todos.remove(key, todo)">X</button>
+    <p>{{todo}}</p>
+  </div>
 </div>
+
+<div class="six columns finished">
+  <h1>Finished:</h1>
+  <div ng-repeat="finished in todos.finished">
+    <p>{{finished}}</p>
+  </div>
+</div>
+<a href="/#/">Home</a>

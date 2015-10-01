@@ -17,8 +17,13 @@ function DataFactory($firebaseArray, $firebaseObject) {
     },
     getTodos: function() {
       var ref = new Firebase('https://weddin.firebaseio.com/todos')
-      todos = $firebaseArray(ref);
+      todos = $firebaseObject(ref);
       return todos;
+    },
+    getFinished: function() {
+      var ref = new Firebase('https://weddin.firebaseio.com/finished')
+      finished = $firebaseObject(ref);
+      return finished;
     },
     saveTodos: function(todo) {
       var ref = new Firebase('https://weddin.firebaseio.com/todos')
