@@ -28,6 +28,8 @@ function MoneyCtrl(DataFactory) {
       vm.foodCost = Math.round(total * 17.33);
       vm.chairsCost = total * 1.75;
       vm.tables = total / 8;
+      vm.tableCost = vm.tables * 8;
+      vm.total = vm.foodCost + vm.chairsCost + vm.tableCost;
     }
   });
 }
