@@ -20,9 +20,10 @@ function MoneyCtrl(DataFactory) {
   peoples.$loaded(function() {
 
     angular.forEach(peoples, function(person) {
-      if (person.attending.includes("Yes") || person.attending.includes("yes") || person.attending.includes("YES")) {
-        total += parseInt(person.number);
+      if (!person.number) {
+        person.number = 0;
       }
+      total += parseInt(person.number);
     });
     if (vm.foodCost === 0) {
       vm.foodCost = Math.round(total * 17.33);
