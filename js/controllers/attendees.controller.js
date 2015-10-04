@@ -22,9 +22,10 @@ function AttendeesCtrl(DataFactory) {
   vm.peoples.$loaded(function() {
     vm.total = 0;
     angular.forEach(vm.peoples, function(person) {
-      if (person.attending.includes("Yes") || person.attending.includes("yes") || person.attending.includes("YES")) {
-        vm.total += parseInt(person.number, 10);
+      if (!person.number) {
+        person.number = 0;
       }
+      vm.total += parseInt(person.number, 10);
     });
   })
 }
