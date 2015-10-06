@@ -6,8 +6,50 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.viewer {
+  margin-top: 68px;
+}
+
 .container {
   min-height: 100%;
+}
+
+.navbar {
+  background-color: #996666;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 6.5rem;
+  z-index: 99;
+}
+
+.navbar-list {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.navbar-item {
+  position: relative;
+  float: left;
+  margin-bottom: 0;
+}
+
+.navbar-link {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600px;
+  letter-spacing: .2rem;
+  margin: 0 17.5px;
+  text-decoration: none;
+  line-height: 6.5rem;
+  display: block;
+  text-align: center;
+}
+
+.navbar-item:hover {
+  background-color: #eee;
 }
 
 .headline,

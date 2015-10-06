@@ -1,10 +1,15 @@
 <div class="twelve columns">
+  <h1>Add Folks Here!</h1>
   <form>
-    <input type="text" class="u-full-width" placeholder="Name..." ng-model="add.newPerson.name">
-    <input type="text" class="u-full-width" placeholder="Email..." ng-model="add.newPerson.email">
-    <input type="text" class="u-full-width" placeholder="Attending..." ng-model="add.newPerson.attending">
-    <input type="text" class="u-full-width" placeholder="Number..." ng-model="add.newPerson.number">
-    <textarea type="textarea" class="u-full-width" placeholder="Message..." ng-model="add.newPerson.message"></textarea>
+    <div class="six columns">
+      <input type="text" class="u-full-width" placeholder="Name..." ng-model="add.newPerson.name">
+      <input type="text" class="u-full-width" placeholder="Email..." ng-model="add.newPerson.email">
+      <input type="text" class="u-full-width" placeholder="Attending..." ng-model="add.newPerson.attending">
+      <input type="text" class="u-full-width" placeholder="Number..." ng-model="add.newPerson.number">
+    </div>
+    <div class="six columns">
+      <textarea type="textarea" class="u-full-width" placeholder="Message..." ng-model="add.newPerson.message"></textarea>
+    </div>
     <button ng-click="add.save()">Save</button>
   </form>
 </div>
