@@ -1,6 +1,6 @@
 angular
   .module('WeddingApp')
-  .controller('AttendeesCtrl', AttendeesCtrl)
+  .controller('AttendeesCtrl', AttendeesCtrl);
 
 if (!String.prototype.includes) {
   String.prototype.includes = function() {'use strict';
@@ -13,9 +13,10 @@ function AttendeesCtrl(DataFactory) {
   var ref = new Firebase('https://weddin.firebaseio.com/attendees');
 
   vm.title = "Wedding App Here!";
-  vm.total;
+  vm.total = 0;
   vm.tableView = false;
   vm.cardView = true;
+  vm.showButton = false;
 
   vm.peoples = DataFactory.getFolks();
 
@@ -27,5 +28,10 @@ function AttendeesCtrl(DataFactory) {
       }
       vm.total += parseInt(person.number, 10);
     });
-  })
+  });
+
+  vm.remove = function(peopleId) {
+    ref.child(peopleId).remove();
+  };
+
 }

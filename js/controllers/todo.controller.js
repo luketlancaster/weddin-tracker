@@ -13,12 +13,12 @@ function TodosCtrl(DataFactory, $scope) {
 
   vm.save = function() {
     var todoRef = new Firebase('https://weddin.firebaseio.com/todos');
-    todoRef.push(vm.todo)
+    todoRef.push(vm.todo);
     vm.todo = '';
-  }
+  };
 
   vm.remove = function(key, todo) {
     delete $scope.data[key];
     firebaseRef.child('finished').push(todo);
-  }
+  };
 }

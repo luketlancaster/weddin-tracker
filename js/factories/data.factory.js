@@ -16,17 +16,17 @@ function DataFactory($firebaseArray, $firebaseObject) {
       return person;
     },
     getTodos: function() {
-      var ref = new Firebase('https://weddin.firebaseio.com/todos')
+      var ref = new Firebase('https://weddin.firebaseio.com/todos');
       todos = $firebaseObject(ref);
       return todos;
     },
     getFinished: function() {
-      var ref = new Firebase('https://weddin.firebaseio.com/finished')
+      var ref = new Firebase('https://weddin.firebaseio.com/finished');
       finished = $firebaseObject(ref);
       return finished;
     },
     saveTodos: function(todo) {
-      var ref = new Firebase('https://weddin.firebaseio.com/todos')
+      var ref = new Firebase('https://weddin.firebaseio.com/todos');
       ref.push(todo);
     }
   };

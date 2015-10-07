@@ -1,6 +1,6 @@
 angular
   .module('WeddingApp')
-  .controller('MoneyCtrl', MoneyCtrl)
+  .controller('MoneyCtrl', MoneyCtrl);
 
 if (!String.prototype.includes) {
   String.prototype.includes = function() {'use strict';
@@ -15,7 +15,7 @@ function MoneyCtrl(DataFactory) {
   vm.chairsCost = 0;
   var total = 0;
 
-  vm.title = "Money app here!"
+  vm.title = "Money app here!";
 
   peoples.$loaded(function() {
 

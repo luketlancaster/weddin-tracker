@@ -13,11 +13,13 @@
 </form>
 
 <div vertilize-container ng-show="attendees.cardView">
-  <div vertilize ng-repeat="people in attendees.peoples | reverse | filter:search" class="four columns main-box">
+  <div vertilize ng-repeat="(key, people) in attendees.peoples | reverse | filter:search" class="four columns main-box">
     <h4><a ng-href="/#/person/{{people.$id}}">{{people.name}}</a></h4>
     <a href="mailto:{{people.email}}">{{people.email}}</a>
     <p>Number Attending: {{people.number}}</p>
     <p>{{people.message}}</p>
+    <button ng-click="people.showButton = true" ng-hide="people.showButton">Remove</button>
+    <button ng-click="attendees.remove(people.$id)" ng-show="people.showButton">Are You Sure?</button>
   </div>
 </div>
 

@@ -14,10 +14,10 @@ function PersonCtrl($scope, $routeParams, DataFactory) {
     var attendee = new Firebase('https://weddin.firebaseio.com/attendees/' + $routeParams.id + '/notes');
     attendee.push(vm.note);
     vm.note = '';
-  }
+  };
 
   vm.remove = function(note) {
     delete $scope.data.notes[note];
-  }
+  };
 
 }
