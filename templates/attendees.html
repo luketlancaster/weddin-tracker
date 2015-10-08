@@ -18,8 +18,9 @@
     <a href="mailto:{{people.email}}">{{people.email}}</a>
     <p>Number Attending: {{people.number}}</p>
     <p>{{people.message}}</p>
-    <button ng-click="people.showButton = true" ng-hide="people.showButton">Remove</button>
-    <button ng-click="attendees.remove(people.$id)" ng-show="people.showButton">Are You Sure?</button>
+    <button ng-click="people.showButton = true" ng-hide="people.showButton" class="left-button">X</button>
+    <button ng-click="people.showButton = false" ng-show="people.showButton" class="left-button">Don't Remove</button>
+    <button ng-click="attendees.remove(people.$id)" ng-show="people.showButton" class="right-button">Remove</button>
   </div>
 </div>
 

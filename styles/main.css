@@ -64,6 +64,8 @@ body {
   padding: 10px;
   margin: 10px;
   border-radius: 4px;
+  min-height: 288px;
+  position: relative;
 }
 
 .main-box p {
@@ -74,6 +76,19 @@ body {
 
 .main-box a {
   text-decoration: none;
+}
+
+.main-box .left-button {
+  position: absolute;
+  left: 10;
+  bottom: 0;
+}
+
+.main-box .right-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
 }
 
 .main-box:first-child {
@@ -117,6 +132,17 @@ a:hover {
   font-size: 1.24em;
   text-decoration: line-through;
 }
+
+textarea {
+  width: 465px;
+  height: 198px;
+}
+
+.add-button {
+  width: 100%;
+  height: 500px;
+}
+
 @media (max-width: 937px) {
   .main-box {
     margin: 5px 0;

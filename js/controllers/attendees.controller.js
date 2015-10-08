@@ -20,6 +20,7 @@ function AttendeesCtrl(DataFactory) {
 
   vm.peoples = DataFactory.getFolks();
 
+
   vm.peoples.$loaded(function() {
     vm.total = 0;
     angular.forEach(vm.peoples, function(person) {
