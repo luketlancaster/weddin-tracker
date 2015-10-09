@@ -1,5 +1,5 @@
 angular
-  .module('WeddingApp')
+  .module('WeddingApp', ['angular.filter', 'ngRoute', 'firebase', 'angular.vertilize'])
   .config( function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {

@@ -10,6 +10,7 @@ if (!String.prototype.includes) {
 
 function AttendeesCtrl(DataFactory) {
   var vm = this;
+  var key = 'yesiamsure';
   var ref = new Firebase('https://weddin.firebaseio.com/attendees');
 
   vm.title = "Wedding App Here!";
@@ -32,7 +33,10 @@ function AttendeesCtrl(DataFactory) {
   });
 
   vm.remove = function(peopleId) {
-    ref.child(peopleId).remove();
+    var answer = prompt("Are you really sure?!");
+    if (answer === key) {
+      ref.child(peopleId).remove();
+    }
   };
 
 }
