@@ -57,6 +57,10 @@ body {
   text-align: center;
 }
 
+.big-main-box {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .main-box {
   border: #ccc 1px solid;
@@ -65,13 +69,14 @@ body {
   margin: 10px;
   border-radius: 4px;
   min-height: 288px;
-  position: relative;
+  flex: 1 25%;
 }
 
 .main-box p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  max-width: 300px;
 }
 
 .main-box a {
@@ -79,16 +84,9 @@ body {
 }
 
 .main-box .left-button {
-  position: absolute;
-  left: 10;
-  bottom: 0;
 }
 
 .main-box .right-button {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin-right: 10px;
 }
 
 .main-box:first-child {
