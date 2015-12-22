@@ -14,7 +14,7 @@
 
 <div vertilize-container ng-show="attendees.cardView">
   <div vertilize ng-repeat="(key, people) in attendees.peoples | reverse | filter:search" class="four columns main-box">
-    <h4><a ng-href="/#/person/{{people.$id}}">{{people.name}}</a></h4>
+    <h4><a ng-href="/#/person/{{people.$id}}/">{{people.name}}</a></h4>
     <a href="mailto:{{people.email}}">{{people.email}}</a>
     <p>Number Attending: {{people.number}}</p>
     <p>{{people.message}}</p>

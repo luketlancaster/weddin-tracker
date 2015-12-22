@@ -38,7 +38,7 @@ body {
 
 .navbar-link {
   text-transform: uppercase;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 400px;
   letter-spacing: .2rem;
   margin: 0 12px;
@@ -143,13 +143,7 @@ textarea {
   height: 500px;
 }
 
-@media (max-width: 937px) {
-  .main-box {
-    margin: 5px 0;
-  }
-  .main-box:first-child {
-    margin-left: 0;
-  }
+@media (min-width: 937px) {
 
   a.navbar-link {
     font-size: 12px;
