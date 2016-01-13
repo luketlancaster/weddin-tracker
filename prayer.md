@@ -1,4 +1,4 @@
-
+## Prayer for Wedding
 Eternal God,
 creator and redeemer,
 from whom comes every good and perfect gift,

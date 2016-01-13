@@ -1,3 +1,4 @@
+// Found from somewhere on the internet
 angular
   .module('WeddingApp')
   .filter('reverse', reverse);
