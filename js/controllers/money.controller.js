@@ -14,6 +14,9 @@ function MoneyCtrl(DataFactory) {
   vm.foodCost = 0;
   vm.chairsCost = 0;
   var total = 0;
+  var foodCostPerPerson = 17.33;
+  var chairCostPerPerson = 1.75;
+  var tablesSeat = 8;
 
   vm.title = "Money app here!";
 
@@ -26,10 +29,10 @@ function MoneyCtrl(DataFactory) {
       total += parseInt(person.number);
     });
     if (vm.foodCost === 0) {
-      vm.foodCost = Math.round(total * 17.33);
-      vm.chairsCost = total * 1.75;
-      vm.tables = total / 8;
-      vm.tableCost = vm.tables * 8;
+      vm.foodCost = Math.round(total * foodCostPerPerson);
+      vm.chairsCost = total * chairCostPerPerson;
+      vm.tables = total / tablesSeat;
+      vm.tableCost = vm.tables * tablesSeat;
       vm.total = vm.foodCost + vm.chairsCost + vm.tableCost;
     }
   });

@@ -26,7 +26,7 @@ angular
         templateUrl: 'templates/person.html',
         controller: 'PersonCtrl',
         controllerAs: 'person'
-      })      
+      })
       .when('/person/edit/:id', {
         templateUrl: 'templates/edit.html',
         controller: 'EditCtrl',
