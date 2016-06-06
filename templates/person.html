@@ -1,4 +1,9 @@
-<h1>{{person.individual.name}}</h1>
+<div class="container">
+    <div class="row">
+        <h1 class="six columns">{{person.individual.name}}</h1>
+        <a class="button six columns edit-button" ng-href="#/person/edit/{{person.individual.$id}}">Edit</a>
+    </div>
+</div>
 <h2><a ng-href="mailto:{{person.individual.email}}">{{person.individual.email}}</a></h2>
 <div class="six columns person-body">
   <h2>{{person.individual.attending}}</h2>
@@ -9,7 +14,7 @@
 <div class="five columns person-form">
   <form>
     <input ng-model="person.note" id="person-note" class="eight columns" type="text">
-    <button ng-click="person.saveNote()">Save Note</button>
+    <button class="save-note-button" ng-click="person.saveNote()">Save Note</button>
   </form>
   <div class="person-notes" ng-repeat="(key, note) in data.notes">
     <button ng-click="person.remove(key)">X</button>
