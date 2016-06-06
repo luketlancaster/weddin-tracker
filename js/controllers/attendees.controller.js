@@ -18,9 +18,10 @@ function AttendeesCtrl(DataFactory) {
   vm.tableView = false;
   vm.cardView = true;
   vm.showButton = false;
+  vm.sortType = 'name';
+  vm.sortReverse = false;
 
   vm.peoples = DataFactory.getFolks();
-
 
   vm.peoples.$loaded(function() {
     vm.total = 0;

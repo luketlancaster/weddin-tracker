@@ -3,8 +3,8 @@
   <h2 class="twelve columns total-people">Total: {{attendees.total}}</h2>
 </div>
 <div class="headline twelve columns">
-  <h2 class="six columns"><a href="/#/" ng-click="attendees.tableView = !attendees.tableView">Toggle Table View</a></h2>
   <h2 class="six columns"><a href="/#/" ng-click="attendees.cardView = !attendees.cardView">Toggle Card View</a></h2>
+  <h2 class="six columns"><a href="/#/" ng-click="attendees.tableView = !attendees.tableView">Toggle Table View</a></h2>
 </div>
 
 <form>
@@ -28,15 +28,15 @@
   <table class="u-full-width">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Attending?</th>
-        <th>Number</th>
-        <th>Message</th>
+        <th><a href="" ng-click="attendees.sortType = 'name'; attendees.sortReverse = !attendees.sortReverse">Name</a></th>
+        <th><a href="" ng-click="attendees.sortType = 'email'; attendees.sortReverse = !attendees.sortReverse">Email</a></th>
+        <th><a href="" ng-click="attendees.sortType = 'attending'; attendees.sortReverse = !attendees.sortReverse">Attending?</a></th>
+        <th><a href="" ng-click="attendees.sortType = 'number'; attendees.sortReverse = !attendees.sortReverse">Number</a></th>
+        <th><a href="" ng-click="attendees.sortType = 'message'; attendees.sortReverse = !attendees.sortReverse">Message</a></th>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="people in attendees.peoples | filter:search">
+      <tr ng-repeat="people in attendees.peoples | orderBy:attendees.sortType:attendees.sortReverse">
         <td>{{people.name}}</td>
         <td><a href="mailto:{{people.email}}">{{people.email}}</a></td>
         <td>{{people.attending}}</td>
