@@ -61,7 +61,8 @@ module.exports = function (grunt) {
       server: {
         options: {
           hostname: 'localhost',
-          port: 8080
+          port: 8080,
+          open: true
         }
       }
     },
@@ -111,4 +112,5 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', ['shell', 'bower', 'connect:server', 'watch:dev']);
   grunt.registerTask('minified', ['bower', 'connect:server', 'watch:min']);
   grunt.registerTask('package', ['bower', 'jshint', 'html2js:dist', 'concat:dist', 'uglify:dist', 'clean:temp', 'compress:dist']);
+  grunt.registerTask('default', ['dev']);
 };
